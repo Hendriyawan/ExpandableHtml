@@ -9,7 +9,8 @@ import 'package:google_fonts/google_fonts.dart';
 /// 26/02/22 Hendriyawan
 class ExpandableHtml extends StatefulWidget {
   final String text;
-  const ExpandableHtml({this.text = "", Key? key}) : super(key: key);
+  final int maxLengthShow;
+  const ExpandableHtml({this.text = "", this.maxLenghtShow = 250, Key? key}) : super(key: key);
 
   @override
   _ExpandableHtmlState createState() => _ExpandableHtmlState();
@@ -28,7 +29,7 @@ class _ExpandableHtmlState extends State<ExpandableHtml> {
 
   ///get text to display safety
   String? _getTextToDisplay(String text) {
-    String result = (text.length > 250) ? text.substring(0, 250) + '...' : text;
+    String result = (text.length > widget.maxLengthShow) ? text.substring(0, widget.maxLengthShow) + '...' : text;
     return result;
   }
 
@@ -55,7 +56,7 @@ class _ExpandableHtmlState extends State<ExpandableHtml> {
         const SizedBox(
           height: 5,
         ),
-        (widget.text.length > 250)
+        (widget.text.length > widget.maxLengthShow)
             ? Align(
                 alignment: Alignment.bottomRight,
                 child: TextButton(
