@@ -5,5 +5,5 @@ widget flutter to make expandable html content
 ```flutter pub add flutter_html```
 
 > copy widget to your project
-![image](https://github.com/Hendriyawan/ExpandableHtml/main/ss1.png)
-![image](https://github.com/Hendriyawan/ExpandableHtml/main/ss2.png)
+![Alt Text](../main/ss1.png)
+![Alt Text](../main/ss2.png)
