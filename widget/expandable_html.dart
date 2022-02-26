@@ -39,7 +39,6 @@ class _ExpandableHtmlState extends State<ExpandableHtml> {
     ///if it's not longer we display all the text
     print(widget.text.length);
 
-    ///we arbitrarily chose 25 as the length
     textToDisplay = _getTextToDisplay(widget.text);
     super.initState();
   }
